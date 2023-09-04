@@ -1,0 +1,128 @@
+{
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "workbench.preferredLightColorTheme": "Gruvbox Material Light",
+    "workbench.preferredDarkColorTheme": "Everforest Dark",
+    "editor.fontFamily": "Zed Mono Extended, MonoLisa Custom, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.scrollback": 1000000,
+    "editor.fontLigatures": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "git.confirmSync": false,
+    "editor.renderWhitespace": "all",
+    "extensions.ignoreRecommendations": true,
+    "python.linting.flake8Enabled": true,
+    "python.testing.pytestEnabled": true,
+    "search.globalFindClipboard": true,
+    "terminal.external.osxExec": "Iterm.app",
+    "editor.minimap.enabled": false,
+    "python.analysis.diagnosticMode": "workspace",
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.rendererType": "dom",
+    "go.toolsManagement.autoUpdate": true,
+    "editor.rulers": [
+        80
+    ],
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.fontFamily": "Cascadia Code, Fira Code",
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true,
+        "suppressRebaseSwitchToTextWarning": true
+    },
+    "gitlab-ci-validator.gitLabURL": "https://gitlab.ozon.ru",
+    "gitlab.instanceUrl": "https://gitlab.ozon.ru",
+    "notebook.output.textLineLimit": 100,
+    "jupyter.themeMatplotlibPlots": true,
+    // The number of spaces a tab is equal to. This setting is overridden
+    // based on the file contents when `editor.detectIndentation` is true.
+    "editor.tabSize": 4,
+    // Insert spaces when pressing Tab. This setting is overriden
+    // based on the file contents when `editor.detectIndentation` is true.
+    "editor.insertSpaces": true,
+    "latex-workshop.docker.image.latex": "maxoner/coursache-builder:greek",
+    "latex-workshop.view.pdf.external.viewer.command": "zathura",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "--synctex-editor-command",
+        "code --reuse-window -g \"%{input}:%{line}\"",
+        "%PDF%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "--synctex-forward=%LINE%:0:%TEX%",
+        "%PDF%"
+    ],
+    "latex-workshop.docker.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.invertMode.enabled": "auto",
+    "latex-workshop.view.pdf.invertMode.grayscale": 0.5,
+    "latex-workshop.view.pdf.invertMode.hueRotate": 270,
+    "latex-workshop.view.pdf.invert": 0.8,
+    "latex-workshop.view.pdf.invertMode.brightness": 0.9,
+    "terminal.integrated.gpuAcceleration": "on",
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.commandCenter": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "oneDarkPro.bold": true,
+    "gruvboxMaterial.italicKeywords": true,
+    "everforest.italicKeywords": true,
+    "python.formatting.provider": "none",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnType": true,
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "hediet.vscode-drawio.customColorSchemes": [
+        []
+    ],
+    "hediet.vscode-drawio.theme": "sketch",
+    "hediet.vscode-drawio.codeLinkActivated": true,
+    "workbench.activityBar.visible": false,
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "cue.formatTool": "cue fmt",
+    "diffEditor.maxComputationTime": 0,
+    "editor.fontSize": 13,
+    "workbench.colorTheme": "Gruvbox Material Light",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "window.autoDetectColorScheme": true,
+    "gruvboxMaterial.lightWorkbench": "flat",
+    "gruvboxMaterial.lightPalette": "mix",
+    "gruvboxMaterial.lightContrast": "hard",
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ":",
+                "w"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ]
+}
