@@ -67,7 +67,6 @@
         yabai -m rule --add app='System Preferences' manage=off
         yabai -m rule --add app=Telegram manage=off
         yabai -m rule --add app='Переводчик' manage=off
-        yabai -m rule --add app='Cisco AnyConnect Secure Mobility Client' manage=off
         yabai -m rule --add app='Microsoft Teams' manage=off
         yabai -m rule --add app='Музыка' manage=off
         yabai -m rule --add app='Почта' manage=off
@@ -130,7 +129,7 @@
 
       };
 
-    home.sessionVariables.GOPROXY = "goproxy.s.o3.ru";
+    home.sessionVariables.GOPROXY = "";
     };
 
 
