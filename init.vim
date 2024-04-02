@@ -1,72 +1,9 @@
-
-filetype off                  " required
 set nocompatible              " be iMproved, required
 set noswapfile
 set backspace=indent,eol,start
 set expandtab
 set tabstop=4
 set splitbelow
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-call plug#begin('~/.vim/plugged')
-Plug 'jjo/vim-cue'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'Bekaboo/deadcolumn.nvim'
-Plug 'olexsmir/gopher.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'liuchengxu/vista.vim'
-Plug 'towolf/vim-helm'
-Plug 'tpope/vim-commentary'
-" Plug 'shaunsingh/seoul256.nvim'
-Plug 'APZelos/blamer.nvim'
-Plug 'ray-x/go.nvim'
-Plug 'vim-airline/vim-airline'
-Plug 'junegunn/seoul256.vim'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'godlygeek/tabular'
-" Plug 'preservim/vim-markdown'
-Plug 'vimwiki/vimwiki'
-Plug 'morhetz/gruvbox'
-Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'michal-h21/vim-zettel'
-Plug 'LnL7/vim-nix'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'idris-hackers/idris-vim'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'monkoose/fzf-hoogle.vim'
-
-" Plug 'nvim-telescope/telescope.nvim'
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'mrcjkb/haskell-tools.nvim'
-
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
-Plug 'lifepillar/vim-solarized8'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'lervag/vimtex'
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
-Plug 'lifepillar/vim-solarized8'
-Plug 'sainnhe/everforest'
-Plug 'tell-k/vim-autopep8'
-Plug 'brentyi/isort.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'ray-x/lsp_signature.nvim'
-call plug#end()
 set completeopt=menu,menuone,noselect,noinsert
 filetype plugin indent on
 set number
@@ -127,6 +64,7 @@ hi Normal guibg=NONE ctermbg=NONE
 set lcs+=space:·
 set list
 :highlight LineNr ctermbg=NONE guibg=NONE
+
 
 
 lua << EOF
@@ -311,6 +249,7 @@ require'lspconfig'.stylelint_lsp.setup{
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
+
 local servers = { 'pyright', 'rust_analyzer', 'gopls', 'hls', 'dagger'}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {

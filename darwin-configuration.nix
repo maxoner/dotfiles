@@ -90,7 +90,11 @@
   };
 
   home-manager.users.mpanin = { pkgs, ... }: {
-    home.packages = [];
+    home.packages = [
+      pyright
+      fzf
+      kubectl
+    ];
 
     programs = {
 
@@ -109,6 +113,57 @@
           # set recolor-keephue
           set guioptions none
         '';
+      };
+
+
+      programs.zsh = {
+        enable = true;
+        zplug = {
+          enable = true;
+          plugins = [
+            { name = "zsh-users/zsh-autosuggestions"; }
+            { name = "zsh-users/zsh-syntax-highlighting"; }
+            {
+              name = "spaceship-prompt/spaceship-prompt";
+              tags = [ as:theme use:spaceship.zsh from:github ];
+            }
+          ];
+        };
+        oh-my-zsh.enable = true;
+      };
+
+      programs.neovim.enable = true;
+      programs.neovim.plugins = with pkgs.vimPlugins; [
+        nvim-lspconfig
+        vim-nix
+        seoul256-vim
+        vim-surround
+        vim-fugitive
+        nerdtree
+        vim-commentary
+        vim-airline
+        gruvbox
+        vim-cue
+        vim-go
+        haskell-vim
+        idris2-vim
+        fzf-vim
+        nvim-cmp
+        cmp-nvim-lsp
+        cmp_luasnip
+        luasnip
+        vimtex
+        lsp_signature-nvim
+        plenary-nvim
+        null-ls-nvim
+        dhall-vim
+      ];
+      programs.neovim.extraConfig = builtins.readFile ./init.vim;
+
+      programs.git = {
+       enable = true;
+       userName = "maximalpanic";
+       userEmail = "maxon1999Pain@gmail.com";
       };
 
       # vscode = {
